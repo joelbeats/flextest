@@ -1,28 +1,27 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
-
-#all-content {
-    display: flex;
-    flex-flow: column;
+html {
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    padding: 0vw;
-    margin: 0vw;
+    padding: 0px;
+    margin: 0px;
+    background-color: indianred;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
 }
 
 header {
-    width: 100%;
+    position: sticky;
+    width: 100vw;
     height: 10vh;
     background-color: indianred;
     display: flex;
@@ -45,19 +44,18 @@ h1 {
     margin: 3vh 2vw;
 }
 
-
-section {
+#content{
     height: 80vh;
-    display: flex;
-    flex-flow: row;
     width: 100vw;
+    display: flex;
+    flex-flow: row;    ;
 }
 
-div {
+section {
     width: 150px;
+    display: flex;
+    flex-flow: column;
     background-color: lightcoral;
-    justify-content: space-between;
-    padding: 2vh 2vw;
 }
 
 #menu1, #menu2 {
@@ -71,17 +69,25 @@ a {
     color: white;
     text-decoration: none;
     list-style-type: none;
-    padding: 5px;
+    padding: 25px ;
     justify-content: space-around;
 
 }
 
-article {
-    width: 100%;
-    padding: 20px;
-    height: 100%;
-    background-color: lightsalmon;
+#art-asi {
+    width: calc(100vw - 150px);
     display: flex;
+    flex-flow: row;
+}
+
+article {
+    width: 70vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    background-color: lightsalmon;
 }
 
 p {
@@ -94,14 +100,14 @@ p {
 
 
 aside {
-    width: 150px;
+    width: 30vw;
     background-color: lightcoral;
 }
 
 footer {
-    height: 10rem;
+    height: 10vh;
+    position: fixed;
     background-color: indianred;
-    align-items: center;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -112,64 +118,120 @@ footer {
     flex: auto;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 5%;
+    margin-right: 40px;
     margin-top: 15px;
     list-style-type: none;
 }
 
 .social {
-    margin: 10px;
-    padding: 10px;
+    width: 30px;
+    margin: 5px;
+    padding: 2px;
 }
 @media screen and (max-width: 600px) {
+    body {
+        top: 0px;
+        left: 0px;
+        height: 1000px;
+        width: 100vw;
+    }
+
     header {
         height: 100px;
-        width: 100%;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
+#logo {
+    width: 3rem;
+    padding: 10px;
+    margin-left: 10px;
+}
 
     h1 {
-        margin: 6vw;
+        margin: 30px;
+        margin-right: 50px;
     }
     
-    section {
-      flex-flow: column;
-    }
-    div{
+    #content {
+        flex-flow: column;
+        height: 100vh;
         width: 100vw;
-        height: 100px;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    #menu1, #menu2{
-        display: flex;
-        flex-flow: row;
-        padding: 10px 50px 5px 50px;
-        justify-content: space-between;
         
     }
 
+    #art-asi {
+        width: 100vw;
+        height: 100vh;
+        flex-flow: column;
+    }
+
+    section {
+        padding: 0px;
+        height: 100px;
+        width: 100vw;
+        flex-flow: column;
+    }
+    
+    #menu1, #menu2{
+        display: flex;
+        flex-flow: row;
+        padding: 5px 0px;
+        justify-content: space-around;
+        
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+        list-style-type: none;
+        margin: 5px 10px;
+        padding: 0px;
+        justify-content: space-around;
+    
+    }
+
     article {
-        width: 100%;
-        height: 40vh;
+        height: 65vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    p {
+        font-size: 100%;
+        column-fill: auto;
+        width: 80%;
+        
     }
     
     aside {
-        width: 100%;
-        height: 20vh;
+        width: 100vw;
+        height: 35vh;
     }
 
     footer {
         height: 100px;
+        position: sticky;
     }
 
     #social-links {
-        padding: 1vh 2vw;
         display: flex;
-        flex: auto;
-        justify-content: space-between;
+        
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 1rem;
+        margin-right: 2rem;
         list-style-type: none;
-        margin-top: 0px;
+    }
+    
+    .social {
+        width: 35px;
+
+        padding-top: 25px;
     }
     
     
